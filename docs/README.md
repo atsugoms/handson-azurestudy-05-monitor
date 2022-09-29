@@ -11,7 +11,7 @@
 ### ハンズオン
 
 1. [Log Analytics Workspace 作成](handout/exercise01.md)
-1. VM Insights 設定
+1. [VM Insights 設定](handout/exercise02.md)
 1. データ収集ルール設定
 1. Blob診断設定（スキップ可）
 1. NSG フローログ
