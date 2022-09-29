@@ -73,7 +73,8 @@
 
 1. ダウンロードした `PT1H.json` の中身を確認
 
-    （キャプチャはJSONを整形し直したもの）
+    * キャプチャはJSONを整形し直したもの
+    * フローログのJSONに関する説明は [ログの形式](https://learn.microsoft.com/ja-jp/azure/network-watcher/network-watcher-nsg-flow-logging-overview#log-format) を参照
 
     ![](images/ex05-0203-flowlog.png)
 
