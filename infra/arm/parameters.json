@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "virtualMachines_vm_handson_winsvr_name": {
+            "value": null
+        },
+        "virtualNetworks_vnet_handson_main_name": {
+            "value": null
+        },
+        "publicIPAddresses_ip_handson_winsvr_name": {
+            "value": null
+        },
+        "networkInterfaces_vm_handson_winsvr996_name": {
+            "value": null
+        },
+        "networkSecurityGroups_nsg_handson_snet_main_name": {
+            "value": null
+        },
+        "schedules_shutdown_computevm_vm_handson_winsvr_name": {
+            "value": null
+        }
+    }
+}
