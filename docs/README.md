@@ -10,8 +10,7 @@
 
 ### ハンズオン
 
-1. 環境準備
-1. Log Analytics Workspace 作成
+1. [Log Analytics Workspace 作成](handout/exercise01.md)
 1. VM Insights 設定
 1. データ収集ルール設定
 1. Blob診断設定（スキップ可）
