@@ -321,27 +321,6 @@
             "sku": {
                 "name": "Standard_LRS",
                 "tier": "Standard"
-            },
-            "properties": {
-                "changeFeed": {
-                    "enabled": false
-                },
-                "restorePolicy": {
-                    "enabled": false
-                },
-                "containerDeleteRetentionPolicy": {
-                    "enabled": true,
-                    "days": 7
-                },
-                "cors": {
-                    "corsRules": []
-                },
-                "deleteRetentionPolicy": {
-                    "allowPermanentDelete": false,
-                    "enabled": true,
-                    "days": 7
-                },
-                "isVersioningEnabled": false
             }
         },
         {
@@ -354,18 +333,6 @@
             "sku": {
                 "name": "Standard_LRS",
                 "tier": "Standard"
-            },
-            "properties": {
-                "protocolSettings": {
-                    "smb": {}
-                },
-                "cors": {
-                    "corsRules": []
-                },
-                "shareDeleteRetentionPolicy": {
-                    "enabled": true,
-                    "days": 7
-                }
             }
         },
         {
@@ -374,12 +341,7 @@
             "name": "[concat(parameters('StorageAccount_Name'), '/default')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccount_Name'))]"
-            ],
-            "properties": {
-                "cors": {
-                    "corsRules": []
-                }
-            }
+            ]
         },
         {
             "type": "Microsoft.Storage/storageAccounts/tableServices",
@@ -387,12 +349,7 @@
             "name": "[concat(parameters('StorageAccount_Name'), '/default')]",
             "dependsOn": [
                 "[resourceId('Microsoft.Storage/storageAccounts', parameters('StorageAccount_Name'))]"
-            ],
-            "properties": {
-                "cors": {
-                    "corsRules": []
-                }
-            }
+            ]
         }
     ]
 }
