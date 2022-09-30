@@ -25,7 +25,7 @@
 
     1. 条件
 
-        「シグナルの選択」にて、メトリックの `Heartbeat` を選択
+        「シグナルの選択」にて、メトリックの `% Processor Time` を選択
 
         ![](images/ex06-0103-alert.png)
 
