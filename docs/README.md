@@ -15,5 +15,5 @@
 1. [データ収集ルール設定](handout/exercise03.md)
 1. [Blob診断設定（スキップ可）](handout/exercise04.md)
 1. [NSG フローログ](handout/exercise05.md)
-1. アラートルール
+1. [アラートルール](handout/exercise06.md)
 1. [Workbook](handout/exercise07.md)
