@@ -112,3 +112,7 @@
 
     ![](images/ex06-0203-alert.png)
 
+
+# 次の Exercise へ
+
+* [Workbook](exercise07.md)

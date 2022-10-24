@@ -58,3 +58,7 @@
 
     ![](images/ex01-0205-law.png)
 
+
+# 次の Exercise へ
+
+* [VM Insights 設定](exercise02.md)

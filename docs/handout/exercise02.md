@@ -1,4 +1,4 @@
-# Exercise1: Log Analytics Workspace 作成
+# Exercise2: VM Insights 設定
 
 ## 【目次】
 
@@ -84,4 +84,6 @@
     ![](images/ex02-0301-map.png)
 
 
+# 次の Exercise へ
 
+* [データ収集ルール設定](exercise03.md)

@@ -1,4 +1,4 @@
-# Exercise3: 
+# Exercise3: データ収集ルール設定
 
 ## 【目次】
 
@@ -128,3 +128,7 @@
 
     ![](images/ex03-0301-cpu.png)
 
+
+# 次の Exercise へ
+
+* [Blob診断設定（スキップ可）](exercise04.md)

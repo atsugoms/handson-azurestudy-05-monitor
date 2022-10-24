@@ -79,3 +79,7 @@
     ![](images/ex05-0203-flowlog.png)
 
 
+
+# 次の Exercise へ
+
+* [アラートルール](exercise06.md)
