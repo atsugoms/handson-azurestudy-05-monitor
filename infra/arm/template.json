@@ -21,20 +21,16 @@
         "VirtualMachine_AdminPassword": {
             "type": "securestring"
         },
-        "VirtualMachine_NIC_Name": {
-            "defaultValue": "nic-handson-winsvr",
-            "type": "string"
-        },
-        "VirtualMachine_PublicIP_Name": {
-            "defaultValue": "ip-handson-winsvr",
-            "type": "string"
-        },
         "StorageAccount_Name": {
             "defaultValue": "sthandson0000",
             "type": "String"
         }
     },
-    "variables": {},
+    "variables": {
+      "VirtualMachine_NIC_Name": "[concat(parameters('VirtualMachine_Name'), '-nic')]",
+      "VirtualMachine_PublicIP_Name": "[concat(parameters('VirtualMachine_Name'), '-ip')]",
+      "VirtualMachine_OsDisk_Name": "[concat(parameters('VirtualMachine_Name'), '-osdisk')]"
+    },
     "resources": [
         {
             "type": "Microsoft.Network/virtualNetworks",
@@ -141,7 +137,7 @@
             "name": "[parameters('VirtualMachine_Name')]",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/networkInterfaces', parameters('VirtualMachine_NIC_Name'))]"
+                "[resourceId('Microsoft.Network/networkInterfaces', variables('VirtualMachine_NIC_Name'))]"
             ],
             "properties": {
                 "hardwareProfile": {
@@ -156,7 +152,7 @@
                     },
                     "osDisk": {
                         "osType": "Windows",
-                        "name": "[concat(parameters('VirtualMachine_Name'), '_disk1_e698cdad6d5e4c829f62d57a2cfa6f97')]",
+                        "name": "[variables('VirtualMachine_OsDisk_Name')]",
                         "createOption": "FromImage",
                         "caching": "ReadWrite",
                         "managedDisk": {
@@ -186,7 +182,7 @@
                 "networkProfile": {
                     "networkInterfaces": [
                         {
-                            "id": "[resourceId('Microsoft.Network/networkInterfaces', parameters('VirtualMachine_NIC_Name'))]",
+                            "id": "[resourceId('Microsoft.Network/networkInterfaces', variables('VirtualMachine_NIC_Name'))]",
                             "properties": {
                                 "deleteOption": "Delete"
                             }
@@ -221,10 +217,10 @@
         {
             "type": "Microsoft.Network/networkInterfaces",
             "apiVersion": "2020-11-01",
-            "name": "[parameters('VirtualMachine_NIC_Name')]",
+            "name": "[variables('VirtualMachine_NIC_Name')]",
             "location": "[resourceGroup().location]",
             "dependsOn": [
-                "[resourceId('Microsoft.Network/publicIPAddresses', parameters('VirtualMachine_PublicIP_Name'))]",
+                "[resourceId('Microsoft.Network/publicIPAddresses', variables('VirtualMachine_PublicIP_Name'))]",
                 "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('VNet_Name'), 'snet-main')]"
             ],
             "properties": {
@@ -235,7 +231,7 @@
                             "privateIPAddress": "10.0.0.4",
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIPAddress": {
-                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', parameters('VirtualMachine_PublicIP_Name'))]"
+                                "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('VirtualMachine_PublicIP_Name'))]"
                             },
                             "subnet": {
                                 "id": "[resourceId('Microsoft.Network/virtualNetworks/subnets', parameters('VNet_Name'), 'snet-main')]"
@@ -255,7 +251,7 @@
         {
             "type": "Microsoft.Network/publicIPAddresses",
             "apiVersion": "2020-11-01",
-            "name": "[parameters('VirtualMachine_PublicIP_Name')]",
+            "name": "[variables('VirtualMachine_PublicIP_Name')]",
             "location": "[resourceGroup().location]",
             "sku": {
                 "name": "Standard",
