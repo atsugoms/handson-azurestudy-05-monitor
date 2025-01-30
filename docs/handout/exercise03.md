@@ -1,8 +1,12 @@
 # Exercise3: データ収集ルール設定
 
-## 【目次】
-
 ![](images/ex03-0000-datacollection.png)
+
+### ⏳ 推定時間
+
+- 5 ~ 7分
+
+### 🗒️ 目次
 
 1. [データ収集ルールを作成](#データ収集ルールを作成)
 1. [ログからHealthbeatの確認](#ログからhealthbeatの確認)
@@ -94,7 +98,7 @@
     確認して表示されていない場合、次の Excersise へ進んであとから確認する
 
 
-## ログからHealthbeatの確認
+## ログから Heartbeat の確認
 
 1. Azureポータル上部の検索窓で「Virtual Machines」を検索、開く
 
