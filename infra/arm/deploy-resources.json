@@ -43,14 +43,14 @@
             "properties": {
                 "addressSpace": {
                     "addressPrefixes": [
-                        "10.0.0.0/16"
+                        "10.1.0.0/16"
                     ]
                 },
                 "subnets": [
                     {
                         "name": "snet-main",
                         "properties": {
-                            "addressPrefix": "10.0.0.0/24",
+                            "addressPrefix": "10.1.0.0/24",
                             "networkSecurityGroup": {
                                 "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('NSG_Main_Name'))]"
                             },
@@ -73,7 +73,7 @@
                 "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('NSG_Main_Name'))]"
             ],
             "properties": {
-                "addressPrefix": "10.0.0.0/24",
+                "addressPrefix": "10.1.0.0/24",
                 "networkSecurityGroup": {
                     "id": "[resourceId('Microsoft.Network/networkSecurityGroups', parameters('NSG_Main_Name'))]"
                 },
@@ -228,7 +228,7 @@
                     {
                         "name": "ipconfig1",
                         "properties": {
-                            "privateIPAddress": "10.0.0.4",
+                            "privateIPAddress": "10.1.0.4",
                             "privateIPAllocationMethod": "Dynamic",
                             "publicIPAddress": {
                                 "id": "[resourceId('Microsoft.Network/publicIPAddresses', variables('VirtualMachine_PublicIP_Name'))]"

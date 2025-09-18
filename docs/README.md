@@ -6,7 +6,7 @@
 
 ### 準備
 
-1. [事前準備](preparation/01-arm.md)
+1. [事前準備](handout/exercise00.md)
 
 ### ハンズオン
 
