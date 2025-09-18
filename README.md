@@ -26,7 +26,16 @@
 
 ## ハンズオン資料
 
-1. [事前準備](/docs/preparation/01-arm.md)
-1. [ハンズオン](/docs/README.md)
+### 準備
 
+1. [事前準備](/docs/handout/exercise00.md)
 
+### ハンズオン
+
+1. [Log Analytics Workspace 作成](/docs/handout/exercise01.md)
+1. [VM Insights 設定](/docs/handout/exercise02.md)
+1. [データ収集ルール設定](/docs/handout/exercise03.md)
+1. [Blob診断設定（スキップ可）](/docs/handout/exercise04.md)
+1. [NSG フローログ](/docs/handout/exercise05.md)
+1. [アラートルール](/docs/handout/exercise06.md)
+1. [Workbook](/docs/handout/exercise07.md)

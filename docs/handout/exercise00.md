@@ -2,7 +2,7 @@
 
 ## 【目次】
 
-![](images/0000-arm.png)
+![](images/ex00-0000-arm.png)
 
 
 ## Azureへリソースを展開
@@ -14,3 +14,8 @@
     (*) "Deploy ボタン" からうまく飛べない場合、 以下のJSONファイルをダウンロードして「カスタムテンプレートのデプロイ」に読み込ませる
 
     [ARMテンプレート JSON ファイル](https://raw.githubusercontent.com/akinaritsugo/handson-azurestudy-05-monitor/main/infra/arm/template.json)
+
+
+    Bastionが必要な場合、以下のテンプレートも展開し、 VNet Peering を作成
+
+    
